@@ -3,13 +3,13 @@ import { journal, products } from "@/lib/catalogue";
 import { Newsletter } from "./Newsletter";
 
 const instagram = [
-  products[0].images[0],
-  products[1].images[1],
-  products[2].images[1],
-  journal[0].image,
-  products[4].images[1],
-  journal[2].image,
-];
+  products[0]?.images[0],
+  products[1]?.images[1],
+  products[2]?.images[1],
+  journal[0]?.image,
+  products[4]?.images[1],
+  journal[2]?.image,
+].filter((src): src is string => Boolean(src));
 
 export function SiteFooter() {
   return (

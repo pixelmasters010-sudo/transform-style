@@ -37,7 +37,7 @@ function ProductPage() {
   const { product } = Route.useLoaderData();
   const { add } = useCart();
   const [image, setImage] = useState(0);
-  const [size, setSize] = useState(sizes[2]);
+  const [size, setSize] = useState(sizes[2] as string);
   const [zoom, setZoom] = useState(false);
 
   const related = products.filter((p) => p.slug !== product.slug).slice(0, 3);

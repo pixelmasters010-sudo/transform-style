@@ -23,6 +23,7 @@ export const Route = createFileRoute("/journal")({
 
 function Journal() {
   const [lead, ...rest] = journal;
+  if (!lead) return null;
 
   return (
     <div className="section shell">
